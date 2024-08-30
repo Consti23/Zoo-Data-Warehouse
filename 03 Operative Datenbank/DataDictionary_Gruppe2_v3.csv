@@ -1,0 +1,277 @@
+Tabelle,Feldname,Felddatentyp,Laenge_Zeichen,PK,FK,Referenz,AI,NN,Beschreibung,String-Länge
+Tier,Tier_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_ID des Tiers,28
+Tier,Tier_Art_ID,INTEGER,,False,True,Tier_Art,False,True,Tier_Art_ID für die Tier-Art,28
+Tier,Tiername,TEXT,50,False,False,,False,False,Name des Tieres,15
+Tier,Geschlecht,TEXT,10,False,False,,False,False,Geschlecht des Tieres,21
+Tier,Groesse,TEXT,2,False,False,,False,False,Größe des Tieres,16
+Tier,Groesse_Einheit,TEXT,50,False,False,,False,False,Größeneinheiten für Größe des Tieres,36
+Tier,Gewicht,TEXT,2,False,False,,False,False,Gewicht des Tieres,18
+Tier,Gewicht_Einheit,TEXT,50,False,False,,False,False,Gewichtseinheiten des Tieres,28
+Tier,Geburtsdatum,Numeric,,False,False,,False,False,Geburtsdatum des Tieres,23
+Tier,Sterbedatum,Numeric,,False,False,,False,False,Sterbedatum des Tieres,22
+Tier,Herkunft,TEXT,50,False,False,,False,False,Herkunft des Tieres,19
+Tier,im Zoo seit,Numeric,,False,False,,False,False,Tier im Zoo seit der Übergabe des Tieres,40
+Tier,im Zoo geboren,Numeric,,False,False,,False,False,Tier im Zoo seit der Geburt des Tieres,38
+Tier,Bemerkungen,TEXT,255,False,False,,False,False,Bemerkung bzgl. der Tier,24
+Tier_Verwandschaft,Tier_Verwandschaft_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Verwandschaft_ID für das die Verwandschaft des Tieres,69
+Tier_Verwandschaft,Tier_ID_(Kind),INTEGER,,False,True,Tier,False,True,Tier_ID_(Kind) für das Kind-Tier,32
+Tier_Verwandschaft,Tier_ID_(Mutter),INTEGER,,False,True,Tier,False,True,Tier_ID_(Mutter) für das Mutter-Tier,36
+Tier_Verwandschaft,Tier_ID_(Vater),INTEGER,,False,True,Tier,False,True,Tier_ID_(Vater) für das Vater-Tier,34
+Tier_Verwandschaft,Notiz,TEXT,255,False,False,,False,False,Bemerkung bzgl. der Geburt,26
+Gehege,Gehege_ID,INTEGER,,True,False,,True,True,Eindeutige Gehege_ID für das Gehege,35
+Gehege,Name des Geheges,TEXT,50,False,False,,False,False,Name der Gehege_ID,18
+Gehege,Gehege_Kategorie_ID,INTEGER,,False,True,Gehege_Kategorie,False,True,Gehege_Kategorie_ID für die Gehege_Kategorie,44
+Gehege,Groesse,Numeric,,False,False,,False,False,Größe des Tieres ,17
+Gehege,Einheit,TEXT,2,False,False,,False,False,"Einheit zur Messung der Größe des Geheges (m2, m3)",50
+Gehege,Baujahr,Numeric,,False,False,,False,False,Baujahr des Geheges,19
+Gehege,Feld für weitere Bemerkungen,TEXT,255,False,False,,False,False,Bemerkung bzgl. der Gehege,26
+Gebäude,Gebäude_ID,INTEGER,,True,False,,True,True,Eindeutige Gebäude_ID des Gebäudes,34
+Gebäude,Gebäudename,TEXT,50,False,False,,False,False,Name des Gebäudes,17
+Gebäude,Himmelsrichtung,TEXT,50,False,False,,False,False,Ausrichtung des Gebäudes in eine Himmelsrichtung,48
+Gebäude,Beschreibung,TEXT,255,False,False,,False,False,Beschreibung des Gebäudes,25
+Tierpfleger,Tierpfleger_ID,INTEGER,,True,False,,True,True,Eindeutige Tierpfleger_ID für einen Tierpfleger,47
+Tierpfleger,Mitarbeiternummer,INTEGER,,False,True,Mitarbeiter,False,True,Mitarbeiternummer für einen Mitarbeiter,39
+Tier_Betreuung,Tier_Betreuung_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Betreuung_ID zur Betreuung des Tieres,53
+Tier_Betreuung,Tierpfleger_ID,INTEGER,,False,True,Tierpfleger,False,True,Tierpfleger_ID für einen Tierpfleger,36
+Tier_Betreuung,Tier_ID,INTEGER,,False,True,Tier,False,True,Tier_ID für ein Tier im Bestand,31
+Tier_Betreuung,Beschreibung_Aufgaben,TEXT,50,False,False,,False,False,Beschreibung_Aufgaben zur Beschreibung der Aufgaben der Mitarbeiter,67
+Tierpfleger_Spezializierung,Tierpfleger_Spez_ID,INTEGER,,True,False,,True,True,Eindeutige Tierpfleger_Spez_ID für einen Tierpfleger mit speziellen Aufgaben,76
+Tierpfleger_Spezializierung,Tierpfleger_ID,INTEGER,,False,True,Tierpfleger,False,True,Tierpfleger_ID für einen Tierpfleger,36
+Tierpfleger_Spezializierung,Tier_Art_ID,INTEGER,,False,True,Tier_Art,False,True,Tier_Art_ID für Tiere unter Betreuung von Spezialisten,54
+Tierpfleger_Spezializierung,Notiz,TEXT,255,False,False,,False,False,Eine Zusammenstellung von Informationen über die spezialisierten Fähigkeiten oder Kenntnisse eines Tierpflegers,111
+Tier_Art,Tier_Art_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Art_ID für Tiere unter normaler Betreuung,57
+Tier_Art,Tier_Gattung_ID,INTEGER,,False,True,Tier_Gattung,False,True,Tier_Gattung_ID der Tier_Gattung,32
+Tier_Art,Beschreibung,TEXT,255,False,False,,False,False,Beschreibung der Tierart,24
+Tierpfleger_Vertretung,Tierpfleger_Vertret_ID,INTEGER,,True,False,,True,True,Eindeutige Tierpfleger_Vertret_ID zur Vertretung,48
+Tierpfleger_Vertretung,Tierpfleger_ID_(Vertretende),INTEGER,,False,True,Tierpfleger,False,True,Tierpfleger_ID_(Vertretende) für die Vertretung,47
+Tierpfleger_Vertretung,Tierpfleger_ID_(Vertreter),INTEGER,,False,True,Tierpfleger,False,True,Tierpfleger_ID_(Vertreter) der Nutzung der Vertretung,53
+Tierpfleger_Vertretung,Grund,TEXT,20,False,False,,False,False,Grund für die Vertretung,24
+Tier_Unverträglichkeiten,Tier_Unverträg_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Unverträg_ID für Unverträglichkeiten gegenüber anderen Tieren,77
+Tier_Unverträglichkeiten,Tier_ID_(Aggressor),INTEGER,,False,True,Tier,False,True,"Tier_ID_(Aggressor), das Tier, das andere Tiere angreift.",57
+Tier_Unverträglichkeiten,Tier_ID_(Leidende),INTEGER,,False,True,Tier,False,True,"Tier_ID_(Leidende), das Tier, das von anderen attackiert wird.",62
+Tier_Unverträglichkeiten,Notiz,TEXT,255,False,False,,False,False,Eine Zusammenstellung von Informationen über Unverträglichkeiten oder Allergien eines Tieres,92
+Tier_Lebenslauf,Tier_Lebenslauf_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Lebenslauf_ID für ein Tier mit seiner Historie,62
+Tier_Lebenslauf,Tier_ID,INTEGER,,False,True,Tier,False,True,Tier_ID für ein Tier im Zoo,27
+Tier_Lebenslauf,Externe_ZooPark_ID,INTEGER,,False,True,Externe_ZooWildparks,False,True,Externe_ZooPark_ID aus dem ein Tier erhalten wird oder,54
+Tier_Lebenslauf,Von,Numeric,,False,False,,False,False,Zeit seit der Übergabe eines Tieres vom Zoo/Park an unseren Zoo,63
+Tier_Lebenslauf,Bis,Numeric,,False,False,,False,False,Zeit bis der Rückgabe eines ausgeliehenen Tieres unseres Zoos,61
+Rundweg,Rundweg_ID,INTEGER,,True,False,,True,True,"Eindeutige Rundweg_ID für diverse Routen im Zoo, z. B. ""Giftige Tiere""",70
+Rundweg,Wegbezeichnung,TEXT,255,False,False,,False,False,"Wegbezeichnungen für diverste Routen, denen Besucher folgen können",66
+Rundweg,Länge in Meter,Numeric,,False,False,,False,False,Länge des Rundweges in Metern,29
+Rundweg,Gehdauer in Minuten,Numeric,,False,False,,False,False,Gedauer des Rundweges in Minuten,32
+Rundweg,Barrierefreiheit,TEXT,50,False,False,,False,False,Barrierefreiheit soll gewährleistet sein,40
+Gehege_Kategorie,Gehege_Kategorie_ID,INTEGER,,True,False,,True,True,Eindeutige Gehege_Kategorie_ID zum erkennen von Gehegen,55
+Gehege_Kategorie,Bezeichnung,TEXT,255,False,False,,False,False,Bezeichnung oder Beschreibung einer Kategorie von Gehegen in einem Zoo oder Wildpark ,85
+Futter,Futter_ID,INTEGER,,True,False,,True,True,Eindeutige Futter_ID für diverse Futter-Optionen,48
+Futter,Futter_Arten_ID,INTEGER,,False,True,Futter_Arten,False,True,Futter_Arten_ID für diverse Futter-Optionen,43
+Futter,Meldebestände,TEXT,50,False,False,,False,False,"Lagerbestände von Futter in einem Zoo oder einer Tieranlage, die gemeldet oder überwacht werden ",96
+Futter,Einheit,TEXT,10,False,False,,False,False,Maßeinheiten zur Messung oder Erfassung der Futtermenge,55
+Gehegen_Lokalisation,Gehegen_Lok_ID,INTEGER,,True,False,,True,True,Eindeutige Gehegen_Lok_ID für diverse Tiere und diverse Klimate,63
+Gehegen_Lokalisation,Gehege_ID,INTEGER,,False,True,Gehege,False,True,"Gehege_ID für Gehege, die im Zoo verteilt sind",46
+Gehegen_Lokalisation,Gebäude_ID,INTEGER,,False,True,Gebäude,False,True,"Gebäude_ID für Gebäude, die im Zoo verteilt sind",48
+Gehegen_Lokalisation,Position,TEXT,50,False,False,,False,False,Position oder Lage eines Geheges innerhalb eines Zoos oder einer Tieranlage,75
+Futter_Arten,Futter_Arten_ID,INTEGER,,True,False,,True,True,Eindeutige Futter_Arten_ID für diverse Futter-Optionen,54
+Futter_Arten,Beschreibung,TEXT,255,False,False,,False,False,Beschreibung der Arten von Futter in einem Zoo oder einer Tieranlage,68
+Externe_Tierarzt,Externe_Tierarzt_ID,INTEGER,,True,False,,True,True,Eindeutige Externe_Tierarzt_ID für Externe Tierärzte,52
+Externe_Tierarzt,Person_ID,INTEGER,,False,True,Person,False,True,"Personen_ID, die als externe Tierärzte fungieren",48
+Externe_Tierarzt,Praxisname,TEXT,50,False,False,,False,False,Praxisname für einen Externen Tierarzt,38
+Externe_Tierarzt,Vorname_ASP,TEXT,50,False,False,,False,False,Vorname des Ansprechpartners des Externe_Tierarzt,49
+Externe_Tierarzt,NAchname_ASP,TEXT,50,False,False,,False,False,Nachname des Ansprechpartners des Externe_Tierarzt,50
+Externe_Tierarzt,für Zoo tätig seit,TEXT,50,False,False,,False,False,Externer Tierarzt ist für den Zoo tätig seit ...,48
+Externe_Tierarzt,Bankverbindung,TEXT,50,False,False,,False,False,Bankverbindung des Externen Tierarztes,38
+Tier_Krankenakte,Tier_Krankenakte_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Krankenakte_ID für Tierärzte,44
+Tier_Krankenakte,Behandlungsgrund,TEXT,255,False,False,,False,False,Behandlungsgrund für das betroffene Tier,40
+Tier_Krankenakte,Behandlungsdatum,Numeric,,False,False,,False,False,Behandlungsdatum für das betroffene Tier,40
+Tier_Krankenakte,Befund,TEXT,255,False,False,,False,False,Befund für das betroffene Tier,30
+Tier_Krankenakte,Meldepflicht?,TEXT,50,False,False,,False,False,Meldepflicht prüfen und entsprechend reagieren,46
+Tier_Krankenakte,Medikation,TEXT,50,False,False,,False,False,Medikation für das betroffene Tier,34
+Tier_Krankenakte,Bemerkungen zur Behandlung,TEXT,255,False,False,,False,False,Bemerkungen zur Behandlung,26
+Tier_Krankenakte,Datum der abgeschlossenen Behandlung,Numeric,,False,False,,False,False,Datum der abgeschlossenen Behandlung,36
+Tierarzt_Spezializierung,Tierarzt_Spez_ID,INTEGER,,True,False,,True,True,Eindeutige Tierarzt_Spez_ID für einen Spezialisten,50
+Tierarzt_Spezializierung,Externe_Tierarzt_ID,INTEGER,,False,True,Externe_Tierarzt,False,True,Externe_Tierarzt_ID für einen Externen Tierarzt,47
+Tierarzt_Spezializierung,Tier_Art_ID,INTEGER,,False,True,Tier_Art,False,True,Tier_Art_ID für Tier_Art,24
+Tierarzt_Spezializierung,Notiz,TEXT,255,False,False,,False,False,Eine Zusammenstellung von Informationen über die spezialisierten Fähigkeiten oder Kenntnisse eines Tierarzt,107
+Tierarzt_Vertretung,Tierarzt_Vertretung_ID,INTEGER,,True,False,,True,True,Eindeutige Tierarzt_Vertretung_ID,33
+Tierarzt_Vertretung,Externe_Tierarzt_ID_(Vertretende),INTEGER,,False,True,Externe_Tierarzt,False,True,Externe_Tierarzt_ID_(Vertretende),33
+Tierarzt_Vertretung,Externe_Tierarzt_ID_(Vertreter),INTEGER,,False,True,Externe_Tierarzt,False,True,Externe_Tierarzt_ID_(Vertreter),31
+Tierarzt_Vertretung,Grund,TEXT,20,False,False,,False,False,Grund für die Vertretung oder Abwesenheit eines Tierarztes in einer Tieranlage oder einem Zoo,93
+Fütterung,Fütterung_ID,INTEGER,,True,False,,True,True,Eindeutige Fütterung_ID für Zootiere,36
+Fütterung,Tier_ID,INTEGER,,False,True,Tier,False,True,Tier_ID zur Fütterung spezifischer Tiere,40
+Fütterung,Futtermischung_ID,INTEGER,,False,True,Futtermischung,False,True,Futtermischung_ID für spezifische Tiere,39
+Fütterung,Datum,Numeric,,False,False,,False,False,"Datum, an dem eine bestimmte Fütterung von Tieren in einem Zoo oder einer Tieranlage stattgefunden hat",102
+Fütterung,Uhrzeit,Numeric,,False,False,,False,False,"Uhrzeit,an dem eine bestimmte Fütterung von Tieren in einem Zoo oder einer Tieranlage stattgefunden hat",103
+Futtermischung,Futtermischung_ID,INTEGER,,True,False,,True,True,Eindeutige Futtermischung_ID für spezifische Tiere,50
+Futtermischung,Notiz,TEXT,255,False,False,,False,False,Eine Zusammenstellung von Informationen über die spezialisierten Kenntnisse einer Futtermischung,96
+Tier_Information_Art,Tier_Info_Art_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Info_Art_ID für spezifische Tiere im Zoo,56
+Tier_Information_Art,Tier_Art_ID,INTEGER,,False,True,Tier_Art,False,True,Tier_Art_ID für spezifische Tiere im Zoo,40
+Tier_Information_Art,Info,TEXT,255,False,False,,False,False,Information über Tiere im Zoo,29
+Tier_Information_Art,Beschreibung,TEXT,50,False,False,,False,False,Beschreibung der Arten im Zoo,29
+Tier_Gattung,Tier_Gattung_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Gattung_ID für Tiergattung,42
+Tier_Gattung,Beschreibung,TEXT,50,False,False,,False,False,Beschreibung der Gattung ,25
+Besucher,Besucher_ID,INTEGER,,True,False,,True,True,"Eindeutige Besucher_ID, Besucher des Zoos",41
+Besucher,Person_ID,INTEGER,,False,True,Person,False,True,Person_ID für jeden Besucher,28
+Besucher,Besucher_Kategorie_ID,INTEGER,,False,True,Besucher_Kategorie,False,True,Person_ID für jeden Besucher,28
+Besucher,Bankverbindung,TEXT,50,False,False,,False,False,Bankverbindung für zahlende Besucher,36
+Besucher_Kategorie,Besucher_Kategorie_ID,INTEGER,,True,False,,True,True,Eindeutige Besucher_Kategorie_ID für unterschiedliche Besucher,62
+Besucher_Kategorie,Besucher_Typ_ID,INTEGER,,False,True,Besucher_Typ,False,True,Besucher_Typ_ID für Besucher mit unterschiedlichen Präferenzen,62
+Besucher_Kategorie,Beschreibung,TEXT,50,False,False,,False,False,Die verschiedenen Kategorien oder Gruppen von Besuchern im Zoo oder Wildpark.,77
+Besucher_Patenschaft_Art,Besucher_Paten_Art_ID,INTEGER,,True,False,,True,True,"Eindeutige Besucher_Paten_Art_ID, für Besucher, die für Paten verfügbar sein könnten",84
+Besucher_Patenschaft_Art,Besucher_ID,INTEGER,,False,True,Besucher,False,True,Besucher_ID für Besucher des Zoos,33
+Besucher_Patenschaft_Art,Tier_Art_ID,INTEGER,,False,True,Tier_Art,False,True,"Tier_Art_ID für Tiere, für die eine Patenschaft gebucht wurde",61
+Besucher_Patenschaft_Art,Datum,Numeric,,False,False,,False,False,"Datum oder den Zeitpunkt, der mit einer bestimmten Art von Patenschaften in einem Zoo oder Wildpark verbunden ist",113
+Besucher_Patenschaft_Art,Notiz,TEXT,50,False,False,,False,False,"Besucher_Patenschaft_Art enthält Informationen über die verschiedenen Arten von Patenschaften, die von Besuchern für Tiere in einem Zoo oder Wildpark übernommen werden können.",175
+Tier_Information_Gattung,Tier_Info_Gattung_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Info_Gattung_ID mit Informationen zu Gattungen,62
+Tier_Information_Gattung,Tier_Gattung_ID,INTEGER,,False,True,Tier_Gattung,False,True,Tier_Gattung_ID der Gattung eines Tieres ,41
+Tier_Information_Gattung,Info,TEXT,255,False,False,,False,False,Informationen über die Gattung eines Tieres in einem Zoo oder Wildpark,70
+Tier_Information_Gattung,Beschreibung,TEXT,50,False,False,,False,False,Beschreibung oder Erläuterung der Gattung eines Tieres in einem Zoo oder Wildpark,81
+Tierarzt_Betreuung,Tierarzt_Betreuung_ID,INTEGER,,True,False,,True,True,Eindeutige Tierarzt_Betreuung_ID für betreuende Tierärzte,57
+Tierarzt_Betreuung,Externe_Tierarzt_ID,INTEGER,,False,True,Externe_Tierarzt,False,True,Externe_Tierarzt_ID für externe betreuende Tierärzte,52
+Tierarzt_Betreuung,Tier_ID,INTEGER,,False,True,Tier,False,True,Tier_ID für Tierärzte zum Betreuen des Tieres,45
+Tierarzt_Betreuung,Tier_Krankenakte_ID,INTEGER,,False,True,Tier_Krankenakte,False,True,Tier_Krankenakte_ID für die Krankenakte eines Tieres ,53
+Futterlager,Futterlager_ID,INTEGER,,True,False,,True,True,Eindeutige Futterlager_ID zur Verteilung der Futtermittel,57
+Futterlager,Gebäude_ID,INTEGER,,False,True,Gebäude,False,True,Gebäude_ID für Gebäude,22
+Futterlager,Beschreibung,TEXT,255,False,False,,False,False,Beschreibung oder Erläuterung des Futterlagers in einem Zoo oder einer Tieranlage,81
+Besucher_Patenschaft_Tier,Besucher_Paten_Tier_ID,INTEGER,,True,False,,True,True,Eindeutige Besucher_Paten_Tier_ID für die Patenschaft eines Besuchers für ein Tier,82
+Besucher_Patenschaft_Tier,Besucher_ID,INTEGER,,False,True,Besucher,False,True,Besucher_ID für Besucher,24
+Besucher_Patenschaft_Tier,Tier_Gattung_ID,INTEGER,,False,True,Tier_Gattung,False,True,Tier_Gattung_ID für die Patenschaft eines Tieres,48
+Besucher_Patenschaft_Tier,Datum,Numeric,50,False,False,,False,False,"Datum, an dem eine bestimmte Patenschaft für ein Tier in einem Zoo oder einer Tieranlage begonnen hat oder erneuert wurde.",122
+Besucher_Patenschaft_Tier,Notiz,TEXT,255,False,False,,False,False,Notiz oder Anmerkung zu einer Patenschaft für ein bestimmtes Tier in einem Zoo oder Wildpark ,93
+Spende_PatenArt_Einmalig,Spende_PatenArt_Ein_ID,INTEGER,,True,False,,True,True,Eindeutige Spende_PatenArt_Ein_ID für Besucher mit Interesse zu Spenden,71
+Spende_PatenArt_Einmalig,Besucher_Paten_Art_ID,INTEGER,,False,True,Besucher_Patenschaft_Art,False,True,Besucher_Paten_Art_ID mit Interesse an einer Patenschaft,56
+Spende_PatenArt_Einmalig,Betrag,Numeric,,False,False,,False,False,Betrag für die Spende,21
+Spende_PatenArt_Einmalig,Waehrung,TEXT,20,False,False,,False,False,Währung für die Spende,22
+Spende_PatenArt_Einmalig,Datum,Numeric,,False,False,,False,False,Datum der Spende,16
+Spende_PatenTier_Einmalig,Spende_PatenTier_Ein_ID,INTEGER,,True,False,,True,True,Eindeutige Spende_PatenTier_Ein_ID für eine einmalige Spende,60
+Spende_PatenTier_Einmalig,Besucher_Paten_Tier_ID,INTEGER,,False,True,Besucher_Patenschaft_Tier,False,True,Besucher_Paten_Tier_ID für einen Besuch beim Paten-Tier,55
+Spende_PatenTier_Einmalig,Betrag,Numeric,,False,False,,False,False,"Der Betrag, der für eine einmalige Patenschaftsspende für eine bestimmte Gattung getätigt wurde.",96
+Spende_PatenTier_Einmalig,Waehrung,TEXT,20,False,False,,False,False,"Die Währung, in der eine einmalige Patenschaftsspende für eine bestimmte Gattung getätigt wurde",95
+Spende_PatenTier_Einmalig,Datum,Numeric,,False,False,,False,False,"Das Datum, an dem eine einmalige Patenschaftsspende für eine bestimmte Gattung erfolgt ist",90
+Rundweg_Lokalisation,Rundweg_Lok_ID,INTEGER,,True,False,,True,True,Eindeutiger Rundweg_Lok_ID für eine bestimmte Lage oder Position auf einem Rundweg im Zoo,89
+Rundweg_Lokalisation,Rundweg_ID,INTEGER,,False,True,Rundweg,False,True,Rundweg_ID für diverse Rundwege durch den Zoo,45
+Rundweg_Lokalisation,Gehege_ID_(start),INTEGER,,False,True,Gehege,False,True,Gehege_ID_(start) als Anfang eines Rundwegs,43
+Rundweg_Lokalisation,Gehege_ID_(ende),INTEGER,,False,True,Gehege,False,True,Gehege_ID_(ende) als Ende eines Rundwegs,40
+Rundweg_Lokalisation,Position,TEXT,50,False,False,,False,False,Position auf einem Rundweg,26
+Rundweg_Information,Rundweg_Info_ID,INTEGER,,True,False,,True,True,Eindeutiger Rundweg_Info_ID für Information für einen Rundweg,61
+Rundweg_Information,Rundweg_ID,INTEGER,,False,True,Rundweg,False,True,Rundweg_ID für diverse Rundwege durch den Zoo,45
+Rundweg_Information,Info,TEXT,50,False,False,,False,False,Information zu einem Rundweg,28
+Rundweg_Information,Beschreibung,TEXT,255,False,False,,False,False,Beschreibung eines Rundweges,28
+Person,Person_ID,INTEGER,,True,False,,True,True,Eindeutige Person_ID für Personen,33
+Person,Anrede,TEXT,4,False,False,,False,False,Anrede des Persons,18
+Person,Titel,TEXT,10,False,False,,False,False,Titel des Persons,17
+Person,Geschlecht,TEXT,10,False,False,,False,False,Geschlecht des Persons,22
+Person,Vorname,TEXT,50,False,False,,False,False,Vorname des Persons,19
+Person,Nachname,TEXT,50,False,False,,False,False,Nachname des Persons,20
+Person,Straße,TEXT,10,False,False,,False,False,Strassenname der Anschrift des Persons,38
+Person,Hausnummer,TEXT,50,False,False,,False,False,Hausnummer der Anschrift des Persons,36
+Person,PLZ,TEXT,10,False,False,,False,False,Postleizahl (D) der Anschrift des Persons,41
+Person,Ort,TEXT,50,False,False,,False,False,Ortschaft der Anschrift des Persons,35
+Person,Land,TEXT,50,False,False,,False,False,Land des Persons,16
+Person,Telefon Festnetz,TEXT,15,False,False,,False,False,Telefon Festnetz einer Person,29
+Person,Telefon Mobil,TEXT,15,False,False,,False,False,Telefon Mobil einer Person,26
+Person,Faxnummer,TEXT,50,False,False,,False,False,Faxnummer einer Person,22
+Person,E-Mail,TEXT,64,False,False,,False,False,E-Mail einer Person,19
+Person,Bemerkungen,TEXT,255,False,False,,False,False,Zusätzliche Informationen oder besondere Anmerkungen zu einer Person,68
+Spende_PatenArt_Periodisch,Spende_PatenArt_Per_ID,INTEGER,,True,False,,True,True,"Eindeutige Spende_PatenArt_Per_ID für eine Art, mit periodischen Spenden für Paten",82
+Spende_PatenArt_Periodisch,Besucher_Paten_Art_ID,INTEGER,,False,True,Besucher_Patenschaft_Art,False,True,Besucher_Paten_Art_ID für Paten,31
+Spende_PatenArt_Periodisch,Betrag,Numeric,,False,False,,False,False,Gespendeter Betrag,18
+Spende_PatenArt_Periodisch,Waehrung,TEXT,50,False,False,,False,False,Waehrung für den gespendeten Betrag,35
+Spende_PatenArt_Periodisch,Datum,Numeric,,False,False,,False,False,Datum der Spende,16
+Spende_PatenArt_Periodisch,Wiederholungszeitraum,TEXT,50,False,False,,False,False,Periodischer Wiederholungszeitraum,34
+Spende_PatenTier_Periodisch,Spende_PatenTier_Per_ID,INTEGER,,True,False,,True,True,"Eindeutige Spende_PatenTier_Per_ID für Patenschaften für ein Tier, mit periodischen Spenden der Paten",101
+Spende_PatenTier_Periodisch,Besucher_Paten_Tier_ID,INTEGER,,False,True,Besucher_Patenschaft_Tier,False,True,Besucher_Paten_Tier_ID für Patenschaften für ein Tier,53
+Spende_PatenTier_Periodisch,Betrag,Numeric,,False,False,,False,False,"Der Betrag, der regelmäßig für die Patenschaft einer Tierart gespendet wird.",76
+Spende_PatenTier_Periodisch,Waehrung,TEXT,20,False,False,,False,False,"Die Währung, in der die regelmäßige Spende für die Patenschaft einer Tierart geleistet wird",91
+Spende_PatenTier_Periodisch,Datum,Numeric,,False,False,,False,False,"Das Datum, an dem die regelmäßige Spende für die Patenschaft einer Tierart durchgeführt wird",92
+Spende_PatenTier_Periodisch,Wiederholungszeitraum,Numeric,,False,False,,False,False,"Die Zeitspanne, in der regelmäßige Spenden für die Patenschaft einer Tierart wiederholt werden",94
+Futterlagerbestand,Futterlagerbestand_ID,INTEGER,,True,False,,True,True,Eindeutige Futterlagerbestand_ID für den Futterlagerbestand,59
+Futterlagerbestand,Futterlager_ID,INTEGER,,False,True,Futterlager,False,True,"ID des  des Futterlagers, in dem sich das Futter im Lagerbestand befindet.",74
+Futterlagerbestand,Futter_ID,INTEGER,,False,True,Futter,False,True,ID des Futters im Lagerbestand eines Zoos.,42
+Futterlagerbestand,Menge,INTEGER,,False,False,,False,False,"Die Menge an Futter, die im Lager eines Zoos vorhanden ist.",59
+Futterlagerbestand,Zugang_Abgang,TEXT,50,False,False,,False,False,"Die Veränderung des Futterlagerbestands, einschließlich Zu- und Abgängen",72
+Futterlagerbestand,Menge_Einheit,TEXT,20,False,False,,False,False,Die Maßeinheit der Futterlagerbestandsmenge,43
+Futterlagerbestand,Datum,Numeric,,False,False,,False,False,"Das Datum, an dem der Futterlagerbestand in einem Zoo überprüft oder aktualisiert wird",86
+Futterlagerbestand,Uhrzeit,Numeric,,False,False,,False,False,"Die Uhrzeit, zu der der Futterlagerbestand in einem Zoo überprüft oder aktualisiert wird",88
+Mitarbeiter,Mitarbeiternummer,INTEGER,,True,False,,True,True,Eindeutige Mitarbeiternummer des Miarbeiters,44
+Mitarbeiter,Beschäftigung seit,Numeric,,False,False,,False,False,Beschäftigungsdauer des Mitarbeiters beim Unternehmen,53
+Mitarbeiter,Person_ID,INTEGER,,False,True,Person,False,True,"ID der Person für jeder Mitarbeiter. Mitarbeiter sind eine Untergruppe von Personen, die innerhalb einer Organisation arbeiten",126
+Mitarbeiter,Geburtsdatum,Numeric,,False,False,,False,False,Geburtdatum des Mitarbeiters,28
+Mitarbeiter,Geburtsort,TEXT,50,False,False,,False,False,Geburtsort des Mitarbeiters,27
+Mitarbeiter,Nationalität,TEXT,50,False,False,,False,False,Nationalität des Mitarbeiters,29
+Mitarbeiter,soz. Status,TEXT,15,False,False,,False,False,sozialen Status des Mitarbeiters,32
+Mitarbeiter,Lohnsteuerklasse,INTEGER,,False,False,,False,False,Steuerliche Klassifizierung eines Mitarbeiters für die Lohnabrechnung  ,71
+Futtermischung_Position,Futtermischung_Pos_ID,INTEGER,,True,False,,True,True,"Eindeutige Futtermischung_Pos_ID einer bestimmten Futtermischung, zu der eine bestimmte Position oder Zutat gehört",114
+Futtermischung_Position,Futtermischung_ID,INTEGER,,False,True,Futtermischung,False,True,"Eine bestimmten Futtermischung, zu der eine bestimmte Position oder Zutat gehört",80
+Futtermischung_Position,Futter_ID,INTEGER,,False,True,Futter,False,True,ID des Futters in einer bestimmten Position oder Zutat in einer Futtermischung,78
+Futtermischung_Position,Menge,Numeric,,False,False,,False,False,Menge einer bestimmten Position oder Zutat in einer Futtermischung,66
+Futtermischung_Position,Menge_Einheit,TEXT,20,False,False,,False,False,ID der Messung der Menge einer Position oder Zutat in einer Futtermischung,74
+Tier_Lokalisation,Tier_Lok_ID,INTEGER,,True,False,,True,True,Eindeutige Tier_Lok_ID für des Lokalisation des Tieres,54
+Tier_Lokalisation,Tier_ID,INTEGER,,False,True,Tier,False,True,ID des Tieres in der Lokalisation,33
+Tier_Lokalisation,Gehege_ID,INTEGER,,False,True,Gehege,False,True,ID des Gehege in der Lokalisation,33
+Tier_Lokalisation,Von,TEXT,50,False,False,,False,False,Beginn Lokalisation des Tieres,30
+Tier_Lokalisation,Bis,TEXT,50,False,False,,False,False,Ende Lokalisation des Tieres ,29
+Tier_Lokalisation,Notiz,TEXT,255,False,False,,False,False,Beschreibung der Lokalisation oder des Standorts eines Tieres,61
+ref_Gewicht,Einheit,TEXT,2,False,False,,False,False,"Referenz für  Einheiten für das Gewicht in Tonnen (t), Kilogramm (kg) und Gramm (g)",83
+ref_Gewicht,Einheit_Gewicht_ID,INTEGER,,True,False,,True,True,Eindeutige Einheit_Gewicht_ID für die Referenz der Einheiten des Tiergewichts,77
+ref_Groesse,Einheit_Groesse_ID,INTEGER,,True,False,,True,True,Eindeutige Einheit_Groesse_ID für die Referenz der Einheiten für die Größe,74
+ref_Groesse,Einheit,TEXT,2,False,False,,False,False,"Referenz für Einheiten zur Größenmessung von Tieren in Metern (m), Zentimetern(cm) und Millimetern(mm)",102
+ref_Lagereinheit_Futter,Lagereinheit_Futter_ID,INTEGER,,True,False,,True,True,Eindeutige Lagereinheit_Futter_ID für die Referenz für Einheiten zur Messung der Menge oder des Lagerbestands von Futte,119
+ref_Lagereinheit_Futter,Einheit,TEXT,50,False,False,,False,False,Referenz für Einheiten zur Messung der Menge oder des Lagerbestands von Futte,77
+ref_Groesseneinheit_Gehege,Groesseneinheit_Gehege_ID,INTEGER,,True,False,,True,True,Eindeutige Groesseneinheit_Gehege_ID für die Referenz der Einheiten zur Messung der Größe eines Gehege,102
+ref_Groesseneinheit_Gehege,Einheit,TEXT,4,False,False,,False,False,Referenz für die Einheiten zur Messung der Größe eines Geheges,62
+ref_Waehrung,Waehrung_ID,INTEGER,,True,False,,True,True,Eindeutige Waehrung_ID der Referenz der Wahrung,47
+ref_Waehrung,Einheit,TEXT,50,False,False,,False,False,Referenz der Währungen für die Abrechnung des eingekauften Futters,66
+ref_Anrede,Anrede_ID,INTEGER,,True,False,,True,True,"Eindeutige Anrede_ID der Referenz der Anrede für Mitarbeiter, Ärzte, Lieferanten und Personen",93
+ref_Anrede,Anrede,TEXT,4,False,False,,False,False,"Referenz der Anrede für Mitarbeiter, Ärzte, Lieferanten und Personen",68
+ref_Titel,Titel_ID,INTEGER,,True,False,,True,True,"Eindeutige Titel_ID der Referenz der akademischen oder beruflichen Titel für Mitarbeiter, Ärzte und Lieferanten, Person",119
+ref_Titel,Titel,TEXT,10,False,False,,False,False,Kennzeichnung der Währungen für die Abrechnung des eingekauften Futters,71
+ref_Vertretungsgruende,Vertretungsgrund_ID,INTEGER,,True,False,,True,True,Eindeutige Vertretungsgrund_ID der Referenz des Vertretungsgrund,64
+ref_Vertretungsgruende,Vertretungsgrund,TEXT,50,False,False,,False,False,Grund der Vertretung,20
+ref_MwSt,MwSt_ID,INTEGER,,True,False,,True,True,Eindeutige MwSt_ID der Referenz der Referenz für die Mehrwertsteuer (MwSt),74
+ref_MwSt,MwSt_Satz,TEXT,50,False,False,,False,False,Referenz für die Mehrwertsteuer (MwSt),38
+ref_Bool,Bool_ID,Numeric,,True,False,,True,True,"Eindeutige Bool_ID der Referenz des Bezeichnung, die auf die Auswahl zwischen 'Ja' und 'Nein' hinweist",102
+ref_Bool,ja_nein,TEXT,50,False,False,,False,False,"Referenz der Bezeichnung, die auf die Auswahl zwischen 'Ja' und 'Nein' hinweist",79
+ref_aSex,aSex_ID,INTEGER,,True,False,,True,True,Eindeutige aSex_ID der Referenz des Geschlechts des Tieres,58
+ref_aSex,aSex,TEXT,10,False,False,,False,False,Referenz des Geschlechts des Tieres,35
+ref_hSex,hSex_ID,INTEGER,,True,False,,True,True,Eindeutige hSex_ID der Referenz  des Geschlechts des Menschen,61
+ref_hSex,hSex,TEXT,10,False,False,,False,False,Referenz des Geschlechts des Mitarbeiters,41
+ref_Nation,Nation_ID,INTEGER,,True,False,,True,True,Eindeutige Nation_ID der Referenz des Land,42
+ref_Nation,Nation,TEXT,50,False,False,,False,False,Referenz des Names des Lands,28
+ref_Ort,Ort_ID,INTEGER,,True,False,,True,True,Eindeutige Ort_ID der Referenz des Orts,39
+ref_Ort,PLZ,TEXT,15,False,False,,False,False,Referenz der Benennung des Postleizahls,39
+ref_Ort,Ort,TEXT,50,False,False,,False,False,Referenz der Benennung des Orts,31
+ref_Ort,Ortsteil_1,TEXT,50,False,False,,False,False,Referenzn zusätzlich die Benennung des Ortsteils,48
+ref_Ort,Ortsteil_2,TEXT,50,False,False,,False,False,Referenz zusätzlich zur Benennung des Ortsteils,47
+Externe_ZooWildparks,Externe_ZooPark_ID,INTEGER,,True,False,,True,True,Eindeutige Externe_ZooPark_ID des externe Zoo Wildparks,55
+Externe_ZooWildparks,Name,TEXT,50,False,False,,False,False,Name der externe Zoo Wildparks,30
+Externe_ZooWildparks,Straße,TEXT,50,False,False,,False,False,Strassenname der Anschrift des externe Zoo Wildparks,52
+Externe_ZooWildparks,Hausnummer,TEXT,10,False,False,,False,False,Hausnummer der Anschrift des externe Zoo Wildparks,50
+Externe_ZooWildparks,PLZ,TEXT,10,False,False,,False,False,Postleizahl (D) der Anschrift des externe Zoo Wildparks,55
+Externe_ZooWildparks,Ort,TEXT,50,False,False,,False,False,Ortschaft der Anschrift des externe Zoo  Wildparks,50
+Externe_ZooWildparks,Vorname_ASP,TEXT,50,False,False,,False,False,Vorname des Ansprechpartners des externe Zoo Wildparks,54
+Externe_ZooWildparks,Nachname_ASP,TEXT,50,False,False,,False,False,Nachname des Ansprechpartners des externe Zoo  Wildparks,56
+Externe_ZooWildparks,Telephone,TEXT,15,False,False,,False,False,Telepfonnumer des externe Zoo  Wildparks,40
+Externe_ZooWildparks,E-Mail,TEXT,64,False,False,,False,False,E-Mail-Kontaktadresse (D) für externe Zoo  Wildparks,52
+Besucher_Typ,Besucher_Typ_ID,INTEGER,,True,False,,True,True,Eindeutige Besucher_Typ_ID des Besucher Type,44
+Besucher_Typ,Name,TEXT,50,False,False,,False,False,Name der kategorien von Zoobesuchern,36
+Futter_Einkauf,Futter_Einkauf_ID,INTEGER,,True,False,,True,True,Eindeutige System-ID für einen bestimmten Einkauf von Futter,60
+Futter_Einkauf,Lieferant_ID,INTEGER,,False,True,Lieferant,False,True,ID des Lieferanten,18
+Futter_Einkauf,MwSt_Satz,TEXT,20,False,False,,False,False,Mehrwertsteuersatz für den Futtereinkauf,40
+Futter_Einkauf,Orderdatum,Numeric,,False,False,,False,False,Bestelldatum des Futtereinkaufs,31
+Futter_Einkauf,Lieferdatum,Numeric,,False,False,,False,False,Lieferdatum des Futtereinkaufs,30
+Lieferant,Lieferant_ID,INTEGER,,True,False,,True,True,Eindeutige Lieferant_ID des Lieferanten,39
+Lieferant,Person_ID,INTEGER,,False,True,Person,False,True,"ID der Person für jeden Lieferant. Lieferanten sind eine Untergruppe von Personen, die Waren oder Dienstleistungen an eine Organisation liefern",143
+Lieferant,Firmenname,TEXT,50,False,False,,False,False,Firmenname des Lieferant,24
+Lieferant,Vorname_ASP,TEXT,50,False,False,,False,False,Vorname des Ansprechpartners des Lieferanten,44
+Lieferant,Nachname_ASP,TEXT,50,False,False,,False,False,Nachname des Ansprechpartners des Lieferanten,45
+Lieferant,für Zoo tätig seit,Numeric,,False,False,,False,False,Das Datum des Beginns der Tätigkeit des Lieferanten im Zoo,58
+Lieferant,Bankverbindung,TEXT,25,False,False,,False,False,Bankverbindung des Lieferanten,30
+Lieferant,Umsatzsteuernummer,TEXT,25,False,False,,False,False,Umsatzsteuernummer des Lieferanten,34
+Futter_Einkauf_Position,Futter_Einkauf_Pos_ID,INTEGER,,True,False,,True,True,Eindeutige Futter_Einkauf_Pos_ID für eine spezifische Position oder einen Artikel im Kontext eines Futtereinkaufs,113
+Futter_Einkauf_Position,Futter_ID,INTEGER,,False,True,Futter,False,True,ID des Futter  für eine spezifische Position oder einen Artikel im Kontext eines Futtereinkaufs,95
+Futter_Einkauf_Position,Futter_Einkauf_ID,INTEGER,,False,True,Futter_Einkauf,False,True,ID für einen spezifischen Einkauf von Futter,44
+Futter_Einkauf_Position,Menge,Numeric,,False,False,,False,False,Menge oder Anzahl einer bestimmten Position oder eines Artikels im Zusammenhang mit dem Einkauf von Futter,106
+Futter_Einkauf_Position,Menge_Einheit,TEXT,20,False,False,,False,False,"Die Einheit, in der die Menge einer bestimmten Position oder eines Artikels im Zusammenhang mit dem Einkauf von Futter gemessen wird",132
+Futter_Einkauf_Position,Konditionen,TEXT,250,False,False,,False,False,"Die Bedingungen oder Konditionen, die mit einer bestimmten Position oder einem Artikel im Zusammenhang mit dem Einkauf von Futter verbunden sind",144
+Futter_Einkauf_Position,Rabatt,TEXT,20,False,False,,False,False,Rabattbetrag oder -prozentsatz für eine Position oder einen Artikel im Zusammenhang mit dem Einkauf von Futter,110
+Futter_Einkauf_Position,Preis_Netto,Numeric,,False,False,,False,False,Nettopreis einer Position oder eines Artikels im Zusammenhang mit dem Einkauf von Futter.,89
+Futter_Einkauf_Position,Waehrung,TEXT,20,False,False,,False,False,"Währung, in der die Positionen oder Artikel für den Einkauf von Futterpreisen angegeben sind.",93
